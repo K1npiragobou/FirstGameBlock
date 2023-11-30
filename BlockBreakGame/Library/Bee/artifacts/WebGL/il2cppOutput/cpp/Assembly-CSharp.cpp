@@ -2490,7 +2490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Update_m7F29D8E933B8D21D2E67
 		bool L_0 = __this->___isGameClear;
 		if (L_0)
 		{
-			goto IL_002d;
+			goto IL_0045;
 		}
 	}
 	{
@@ -2498,7 +2498,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Update_m7F29D8E933B8D21D2E67
 		L_1 = GameManager_DestroyAllBlocks_mCC4D91C25A000CECA89B035F8033619E54B6816C(__this, NULL);
 		if (!L_1)
 		{
-			goto IL_002d;
+			goto IL_0045;
 		}
 	}
 	{
@@ -2507,9 +2507,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Update_m7F29D8E933B8D21D2E67
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___gameClearUI;
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)1, NULL);
 		__this->___isGameClear = (bool)1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___stage;
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___gamePlayUI;
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
 	}
 
-IL_002d:
+IL_0045:
 	{
 		return;
 	}
